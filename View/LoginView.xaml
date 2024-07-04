@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.View.LoginView"
+             xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
+             Title="LoginView">
+
+                  <!--First Screen 30% -->
+    <Grid RowDefinitions=".3*,.7*">
+                    <RoundRectangle  CornerRadius="0,0,0,0" Fill="BlueViolet"/>
+           
+                      <!--Second Screen 70%-->
+
+                    <Grid Grid.Row="1">
+                        <RoundRectangle  CornerRadius="10,10,5,0" Fill="BlanchedAlmond"/>
+
+                    </Grid>
+
+
+                         <!--First screen Picture-->
+                             
+                             
+                    <Grid ColumnDefinitions=".5*,.5*">
+                        <Image Aspect="AspectFill"  Source="dotnet_bot.png" HeightRequest="150"/>
+                        
+                    </Grid>
+        <skia:SKLottieView Grid.Column="1" 
+                           RepeatCount="-1"
+                   RepeatMode="Reverse"
+                   Source="air.json"
+                   HeightRequest="100"
+                   WidthRequest="100" />
+
+        <!--Second Screen-->
+
+                    <Grid Grid.Row="1">
+                        
+                        <!--Welocome text-->
+                        
+
+            <VerticalStackLayout Margin="30,0,30,0">
+                <Label FontAttributes="Bold"
+                   FontSize="Medium"
+                    TextColor="Black"
+                     HorizontalTextAlignment="Center"
+                     Text="create an Account"
+                     Margin="0,0,0,20"
+                       Padding="0,40,0,0"/>
+                
+                  
+                <!--Second text login-->
+
+                <Label FontAttributes="Bold"
+                 FontSize="Medium"
+                 TextColor="Black"
+                 HorizontalTextAlignment="Center"
+                     Text="LOGIN TO CONTINUE"
+                   Margin="0,0,0,20"/>
+                
+                <!--Username-->
+                <StackLayout Orientation="Horizontal">
+                    <Frame ZIndex="1" HasShadow="True" BorderColor="BLACK" CornerRadius="15" HeightRequest="50" WidthRequest="50">
+                        <Image Source="email.png" HeightRequest="35" WidthRequest="35" VerticalOptions="Center"/>
+                    </Frame>
+                    <Frame Padding="0" HasShadow="True" BorderColor="DarkKhaki" CornerRadius="15" HorizontalOptions="FillAndExpand" Margin="-20,0,0,0">
+                        <Entry Margin="20,0,0,0" Keyboard="Email" VerticalOptions="Center" Placeholder="Username"/>
+
+
+                    </Frame>
+                </StackLayout>
+
+                        <!--Password-->
+                <StackLayout Orientation="Horizontal" Margin="0,20,0,20"  >
+                    <Frame  ZIndex="1" HasShadow="True" BorderColor="BLACK" CornerRadius="15" HeightRequest="50" WidthRequest="50">
+                        <Image Source="password.png" HeightRequest="35" WidthRequest="35" VerticalOptions="Center"/>
+                    </Frame>
+                    
+                    <!--Password hide IsPassword="True"-->
+                    
+                    <Frame Padding="0" HasShadow="True" BorderColor="DarkKhaki" CornerRadius="15" HorizontalOptions="FillAndExpand" Margin="-20,0,0,0">
+                        <Entry Margin="20,0,0,0" IsPassword="True" VerticalOptions="Center" Placeholder="Password"/>
+
+
+                    </Frame>
+                </StackLayout>
+
+
+                <StackLayout Margin="30,0,0,0" Orientation="Horizontal">
+                    <CheckBox Color="Blue" IsChecked="False" Margin="-40,0,0,0"/>
+                    <Label Text="Show Password" TextColor="Black" FontAttributes="Bold" Margin="-10,13,0,0"/>
+                    <Button Text="Forgot Password" Background="Transparent" TextColor="Red" FontAttributes="Bold" BorderWidth="0" Margin="40,0,0,0"/>
+
+                </StackLayout>
+
+                <Button Margin="0,10,0,0" Text="Login" WidthRequest="250" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" CornerRadius="15"/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+                    <Label Text="Dont have an account!" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="Red" Margin="0,10,0,0"/>
+                    <Button Text="Sign up" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold" Margin="0,10,0,0"/>
+
+
+                </StackLayout>
+            </VerticalStackLayout>
+
+        </Grid>
+                
+    </Grid>
+               
+</ContentPage>
