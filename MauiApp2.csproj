@@ -57,8 +57,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+<<<<<<< HEAD
 	  <None Remove="Resources\Images\HOP.png" />
 	  <None Remove="Resources\Images\hope.png" />
+=======
+>>>>>>> 8d431b68e110012532460a3aa9a2b6632287557f
 	  <None Remove="Resources\raw\air.json" />
 	</ItemGroup>
 
@@ -77,9 +80,12 @@
 	  <MauiXaml Update="View\LoginView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+<<<<<<< HEAD
 	  <MauiXaml Update="View\Register.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+=======
+>>>>>>> 8d431b68e110012532460a3aa9a2b6632287557f
 	</ItemGroup>
 
 </Project>

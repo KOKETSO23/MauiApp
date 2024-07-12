@@ -6,6 +6,7 @@ public partial class LoginView : ContentPage
 	{
 		InitializeComponent();
 	}
+<<<<<<< HEAD
 	
     private void Signin_Clicked(object sender, EventArgs e)
     {
@@ -19,4 +20,6 @@ public partial class LoginView : ContentPage
     {
         Password.IsPassword = !e.Value;
     }
+=======
+>>>>>>> 8d431b68e110012532460a3aa9a2b6632287557f
 }
