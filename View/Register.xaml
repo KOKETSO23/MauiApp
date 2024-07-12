@@ -19,15 +19,15 @@
 
 
         <Grid ColumnDefinitions=".5*,.5*">
-            <Image Aspect="AspectFill"  Source="dotnet_bot.png" HeightRequest="150"/>
+           
 
         </Grid>
         <skia:SKLottieView Grid.Column="1" 
                         RepeatCount="-1"
                 RepeatMode="Reverse"
                 Source="air.json"
-                HeightRequest="100"
-                WidthRequest="100" />
+                HeightRequest="200"
+                WidthRequest="200" />
 
         <!--Second Screen-->
 
@@ -87,7 +87,7 @@
                     <!--Password hide IsPassword="True"-->
 
                     <Frame Padding="0" HasShadow="True" BorderColor="DarkKhaki" CornerRadius="15" HorizontalOptions="FillAndExpand" Margin="-20,0,0,0">
-                        <Entry Margin="20,0,0,0" IsPassword="True" VerticalOptions="Center" Placeholder="Password"/>
+                        <Entry Margin="20,0,0,0" IsPassword="True" VerticalOptions="Center" x:Name="Password" Placeholder="Password"/>
 
 
                     </Frame>
@@ -101,7 +101,7 @@
                     <!--Password hide IsPassword="True"-->
 
                     <Frame Padding="0" HasShadow="True" BorderColor="DarkKhaki" CornerRadius="15" HorizontalOptions="FillAndExpand" Margin="-20,0,0,0">
-                        <Entry Margin="20,0,0,0" IsPassword="True" VerticalOptions="Center" Placeholder="Confirm Password"/>
+                        <Entry Margin="20,0,0,0" IsPassword="True" VerticalOptions="Center" x:Name="ConfirmPsd" Placeholder="Confirm Password"/>
 
 
                     </Frame>
@@ -110,7 +110,7 @@
 
 
                 <StackLayout Margin="30,0,0,0" Orientation="Horizontal">
-                    <CheckBox Color="Blue" IsChecked="False" Margin="-40,0,0,0"/>
+                    <CheckBox Color="Blue" x:Name="CheckBox" CheckedChanged="CheckBox_CheckedChanged" IsChecked="False"   Margin="-40,0,0,0"/>
                     <Label Text="Show Password" TextColor="Black" FontAttributes="Bold" Margin="-10,13,0,0"/>
 
                 </StackLayout>
@@ -123,7 +123,7 @@
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
 
-                    <Label Text="Back to Login!" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="Red" Margin="0,10,0,0"/>
+                    <Button Text="Back to Login!" x:Name="Back2login" Clicked="Back2login_Clicked" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="Red" Margin="0,10,0,0"/>
 
                 </StackLayout>
 

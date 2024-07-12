@@ -1,4 +1,5 @@
-﻿using MauiApp2.View;
+﻿
+using MauiApp2.View;
 
 namespace MauiApp2
 {
@@ -8,7 +9,7 @@ namespace MauiApp2
         {
             InitializeComponent();
 
-            MainPage = new Register();
+            MainPage =  new NavigationPage( new LoginView());
         }
     }
 }

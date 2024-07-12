@@ -6,4 +6,17 @@ public partial class LoginView : ContentPage
 	{
 		InitializeComponent();
 	}
+	
+    private void Signin_Clicked(object sender, EventArgs e)
+    {
+        {
+            Navigation.PushModalAsync(new Register());
+        }
+
+    }
+
+    private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+    {
+        Password.IsPassword = !e.Value;
+    }
 }
